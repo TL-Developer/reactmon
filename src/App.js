@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Header from './components/Header'
-import Pokemons from './components/Pokemons';
-import Footer from './components/Footer';
+import Header from './components/Header/'
+import Pokemons from './components/Pokemons/';
+import Footer from './components/Footer/';
 
 class App extends Component {
   render() {
