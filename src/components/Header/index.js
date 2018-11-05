@@ -4,9 +4,18 @@ import './style.scss'
 export default class Header extends Component {
   render() {
     return (
-      <div className="CcHeader">
-        HEADER
-      </div>
+      <header className="CcHeader">
+        <ul className="list">
+          <li route="/">Home</li>
+          <li route="/about">About</li>
+          <li>
+            <a href="https://github.com/TL-Developer/PokeES6" target="_black">Github</a>
+          </li>
+        </ul>
+        <div className="app-title">
+          <h3>.:: PokeLima ::.</h3>
+        </div>
+      </header>
     )
   }
 }

@@ -1,3 +1,57 @@
 .CcHeader {
-  background: red;
+  background: #db4242;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+
+  h3 {
+    text-align: center;
+    color: #fff;
+    padding-top: 1.5%;
+  }
+
+  .app-title {
+    position: absolute;
+    right: 5%;
+    top: 1.5%;
+
+    h3 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  ul.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    li {
+      padding: 1.4% 2%;
+      float: left;
+      height: 100%;
+      cursor: pointer;
+      -webkit-transition: all .5s ease;
+      -moz-transition: all .5s ease;
+      -ms-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+      color: #fff;
+
+      &:hover {
+        background: #fff;
+        color: #db4242;
+      }
+
+      &:hover {
+        border-top: 0;
+        border-left: 5px;
+        border-right: 0px;
+        border-bottom: 0;
+        border-style: solid;
+        border-color: #ff6969;
+      }
+    }
+  }
 }

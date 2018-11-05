@@ -1,8 +1,6 @@
-import { clickReducer } from './clickReducer';
-// import { OtherReducer } from './otherReducer';
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
+import pokemonReducer from "./pokemonReducer";
 
-export const Reducers = {
-  clickState: clickReducer
-  // otherState: otherReducer
-};
+export default combineReducers({
+  pokemons: pokemonReducer
+});
