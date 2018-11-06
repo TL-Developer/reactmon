@@ -13,7 +13,7 @@ class Pokemons extends Component {
 
 	changePokemon (pokemon) {
 		debugger
-		// this.props.changePokemon(pokemon);
+		// this.props.changePokemon({});
 	}
 
 	componentWillMount () {
@@ -22,7 +22,7 @@ class Pokemons extends Component {
 
 	render () {
 		const pokemons = this.props.pokemons.map(pokemon => (
-			<li key={pokemon.id} onClick={this.changePokemon(pokemon)}>
+			<li key={pokemon.id} onClick={this.changePokemon}>
 				<h3>{pokemon.name}</h3>
 			</li>
 		));
@@ -45,7 +45,7 @@ Pokemons.propTypes = {
 }
 
 const mapStateToProps = state => ({
-	pokemons: state.pokemons.pokemons
+	pokemons: state.data.pokemons
 });
 
 export default connect(mapStateToProps, { fetchPokemons, changePokemon })(Pokemons);
