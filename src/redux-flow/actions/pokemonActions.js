@@ -1,10 +1,11 @@
 import { FETCH_POKEMONS, NEW_POKEMON } from "./types";
 
-export const fetchPokemons = () => dispatch => {
+export const fetchPokemons = () => async dispatch => {
   // fetch('https://pokeapi.co/api/v2/pokemon/?limit=21&offset=0')
   // 	.then((pokemons) => {
   // 		this.setState({pokemons: pokemons});
   // 	});
+
   dispatch({
     type: FETCH_POKEMONS,
     payload: [

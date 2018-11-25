@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { PropTypes	 } from "prop-types";
-import { fetchPokemons, changePokemon } from "../../actions/pokemonActions";
+import { fetchPokemons, changePokemon } from "../../redux-flow/actions/pokemonActions";
 import './style.scss';
 
 class Pokemons extends Component {
