@@ -26,36 +26,15 @@ class Pokemons extends Component {
 		// 		<h3>{pokemon.name}</h3>
 		// 	</li>
 		// ));
-		const pokemons = [{
-      'id': '1',
-      'name': 'pikachu',
-      'url': 'http://'
-    },
-    {
-      'id': '2',
-      'name': 'bulbasaur',
-      'url': 'http://'
-    },
-    {
-      'id': '3',
-      'name': 'squartle',
-      'url': 'http://'
-    },
-    {
-      'id': '4',
-      'name': 'charizard',
-      'url': 'http://'
-    }].map((pokemon) => (
-			<li key={pokemon.id} onClick={this.changePokemon}>
-	 			<h3>{pokemon.name}</h3>
-		 	</li>
-		));
 		return (
 			<div className="CcPokemons">
 				<h3>Lista de pokemons</h3>
-
 				<ul className="CcPokemons__list">
-					{pokemons}
+					{this.props.pokemons.map((pokemon) => (
+            <li key={pokemon.id} onClick={this.changePokemon}>
+              <h3>{pokemon.name}</h3>
+            </li>
+          ))}
 				</ul>
 			</div>
 		)
