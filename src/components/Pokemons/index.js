@@ -8,23 +8,47 @@ class Pokemons extends Component {
 	constructor (props) {
 		super(props);
 
-		this.onClick = this.changePokemon.bind(this);
+		// this.onClick = this.changePokemon.bind(this);
 	}
 
-	changePokemon (pokemon) {
-		debugger
-		// this.props.changePokemon({});
-	}
+	// changePokemon (pokemon) {
+	// 	debugger
+	// 	// this.props.changePokemon({});
+	// }
 
 	componentWillMount () {
-		this.props.fetchPokemons();
+		// this.props.fetchPokemons();
 	}
 
 	render () {
-		const pokemons = this.props.pokemons.map(pokemon => (
+		// const pokemons = this.props.pokemons.map(pokemon => (
+		// 	<li key={pokemon.id} onClick={this.changePokemon}>
+		// 		<h3>{pokemon.name}</h3>
+		// 	</li>
+		// ));
+		const pokemons = [{
+      'id': '1',
+      'name': 'pikachu',
+      'url': 'http://'
+    },
+    {
+      'id': '2',
+      'name': 'bulbasaur',
+      'url': 'http://'
+    },
+    {
+      'id': '3',
+      'name': 'squartle',
+      'url': 'http://'
+    },
+    {
+      'id': '4',
+      'name': 'charizard',
+      'url': 'http://'
+    }].map((pokemon) => (
 			<li key={pokemon.id} onClick={this.changePokemon}>
-				<h3>{pokemon.name}</h3>
-			</li>
+	 			<h3>{pokemon.name}</h3>
+		 	</li>
 		));
 		return (
 			<div className="CcPokemons">
@@ -39,13 +63,15 @@ class Pokemons extends Component {
 }
 
 Pokemons.propTypes = {
-	fetchPokemons: PropTypes.func.isRequired,
-	changePokemon: PropTypes.func.isRequired,
-	pokemons: PropTypes.array.isRequired
+	// fetchPokemons: PropTypes.func.isRequired,
+	// changePokemon: PropTypes.func.isRequired,
+	// pokemons: PropTypes.array.isRequired
 }
 
-const mapStateToProps = state => ({
-	pokemons: state.data.pokemons
-});
+// const mapStateToProps = state => ({
+// 	pokemons: state.data.pokemons
+// });
 
-export default connect(mapStateToProps, { fetchPokemons, changePokemon })(Pokemons);
+// export default connect(mapStateToProps, { fetchPokemons, changePokemon })(Pokemons);
+
+export default Pokemons;

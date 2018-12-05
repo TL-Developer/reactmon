@@ -13,7 +13,7 @@ export default class Header extends Component {
           </li>
         </ul>
         <div className="app-title">
-          <h3>.:: PokeLima ::.</h3>
+          <h3>{this.props.slogan}</h3>
         </div>
       </header>
     )

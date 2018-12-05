@@ -1,13 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-class PokemonDetail extends Component {
-  render() {
-    return (
-      <div>
-        Pokemon Detalhe
-      </div>
-    )
-  }
+const PokemonDetail = ({ title }) => (
+  <div>
+    {title}
+  </div>
+);
+
+PokemonDetail.defaultProps = {
+  title: ''
 }
+
+PokemonDetail.propTypes = {
+  title: PropTypes.string.isRequired
+};
 
 export default PokemonDetail;
