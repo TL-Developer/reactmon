@@ -28,7 +28,6 @@ class Pokemons extends Component {
 		// ));
 		return (
 			<div className="CcPokemons">
-				<h3>Lista de pokemons</h3>
 				<ul className="CcPokemons__list">
 					{this.props.pokemons.map((pokemon) => (
             <li key={pokemon.id} onClick={this.changePokemon}>

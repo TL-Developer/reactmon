@@ -14,11 +14,6 @@ class App extends Component {
           'url': 'http://'
         },
         {
-          'id': '2',
-          'name': 'bulbasaur',
-          'url': 'http://'
-        },
-        {
           'id': '3',
           'name': 'squartle',
           'url': 'http://'
@@ -30,15 +25,19 @@ class App extends Component {
         }
       ],
       pokemon: {
-        'id': '1',
-        'name': 'pikachu',
+        'id': '4',
+        'name': 'charizard',
         'url': 'http://'
       }
     }
   }
 
   render() {
-    return <AppContent />
+    return <AppContent
+      slogan={ this.state.slogan }
+      pokemons={ this.state.pokemons }
+      pokemon={ this.state.pokemon }
+    />
   }
 }
 
