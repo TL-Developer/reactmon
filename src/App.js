@@ -10,10 +10,15 @@ class App extends Component {
       pokemons: [],
       pokemon: null
     }
+
+    this.uri = {
+      pokemons: 'http://www.mocky.io/v2/5c0ad2b12f00005b0013eb35',
+      pokemon: 'http://www.mocky.io/v2/5c0aa8a13500006c00a86239'
+    }
   }
 
   componentWillMount () {
-    axios.get(`http://www.mocky.io/v2/5c0ad2b12f00005b0013eb35`)
+    axios.get(this.uri.pokemons)
       .then(res => {
         this.setState({pokemons: res.data});
       })
@@ -23,9 +28,19 @@ class App extends Component {
     const keyCode = e.wich || e.keyCode;
     const ENTER = 13;
 
-    this.setState({lading: true});
     if (keyCode === ENTER) {
-      axios.get(`http://www.mocky.io/v2/5c0aa8a13500006c00a86239`)
+      this.setState({pokemon: null});
+      axios.get(this.uri.pokemon)
+        .then(res => {
+          this.setState({pokemon: res.data});
+        })
+    }
+  }
+
+  changePokemon (pokemon) {
+    return (e) => {
+      this.setState({pokemon: null});
+      axios.get(this.uri.pokemon)
         .then(res => {
           this.setState({pokemon: res.data});
         })
@@ -38,6 +53,7 @@ class App extends Component {
       pokemons={ this.state.pokemons }
       pokemon={ this.state.pokemon }
       handleSearch={(e) => this.handleSearch(e)}
+      changePokemon={(pokemon) => this.changePokemon(pokemon)}
     />
   }
 }
