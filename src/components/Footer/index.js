@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types';
+import React from 'react'
 import './style.scss';
 
 const Footer = () => (
@@ -7,7 +6,5 @@ const Footer = () => (
     Footer
   </div>
 );
-
-Footer.propTypes = {};
 
 export default Footer;

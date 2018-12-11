@@ -28,7 +28,6 @@ class App extends Component {
   handleSearch (e) {
     const keyCode = e.wich || e.keyCode;
     const ENTER = 13;
-    const target = e.target;
 
     if (keyCode === ENTER) {
       this.setState({pokemon: null, isFetching: true});

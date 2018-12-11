@@ -1,14 +1,9 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 
 const Pagination = () => (
   <div className="row">
     pagination <br/>
   </div>
 );
-
-Pagination.propTypes = {
-
-};
 
 export default Pagination;
