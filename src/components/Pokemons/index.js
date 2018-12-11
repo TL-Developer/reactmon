@@ -17,7 +17,8 @@ const Pokemons = ({ pokemons, changePokemon }) => (
 );
 
 Pokemons.propTypes = {
-	pokemons: PropTypes.array.isRequired
+  pokemons: PropTypes.array.isRequired,
+	changePokemon: PropTypes.func.isRequired,
 };
 
 export default Pokemons;

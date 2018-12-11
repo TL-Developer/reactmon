@@ -8,7 +8,7 @@ import PokemonDetail from "../PokemonDetail/";
 import Autocomplete from "../Autocomplete/";
 import Pagination from "../Pagination/";
 
-const AppComponent = ({slogan, pokemons, pokemon, handleSearch, changePokemon}) => (
+const AppComponent = ({slogan, pokemons, pokemon, handleSearch, changePokemon, isFetching}) => (
   <div className="App">
     <Header slogan={slogan} />
 
@@ -22,8 +22,10 @@ const AppComponent = ({slogan, pokemons, pokemon, handleSearch, changePokemon}) 
         <div className="row">
           <Autocomplete
             handleSearch={handleSearch}
+            isDisabled={isFetching}
           />
         </div>
+        {isFetching && <div>Carregando</div>}
         { !!pokemon && <PokemonDetail title="Pokemon Details" pokemon={ pokemon } /> }
       </div>
     </div>
@@ -39,7 +41,9 @@ AppComponent.propTypes = {
   slogan: PropTypes.string.isRequired,
   pokemons: PropTypes.array.isRequired,
   pokemon:PropTypes.object,
-  handleSearch:PropTypes.func,
+  handleSearch:PropTypes.func.isRequired,
+  changePokemon:PropTypes.func.isRequired,
+  isFetching:PropTypes.bool,
 };
 
 export default AppComponent;

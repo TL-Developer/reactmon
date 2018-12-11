@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import './style.scss';
 
-export default class Header extends Component {
-  render() {
-    return (
-      <div className="CcFooter">
-        Footer
-      </div>
-    )
-  }
-}
+const Footer = () => (
+  <div className="CcFooter">
+    Footer
+  </div>
+);
+
+Footer.propTypes = {};
+
+export default Footer;

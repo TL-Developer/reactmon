@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const PokemonDetail = ({ title, pokemon }) => (
   <div>
     <div className="row"></div>
-    { title }
+    { title } <br/>
     { pokemon.name }
   </div>
 );

@@ -8,7 +8,8 @@ class App extends Component {
     this.state = {
       slogan: '.:: PokeLima ::.',
       pokemons: [],
-      pokemon: null
+      pokemon: null,
+      isFetching: false
     }
 
     this.uri = {
@@ -27,23 +28,31 @@ class App extends Component {
   handleSearch (e) {
     const keyCode = e.wich || e.keyCode;
     const ENTER = 13;
+    const target = e.target;
 
     if (keyCode === ENTER) {
-      this.setState({pokemon: null});
+      this.setState({pokemon: null, isFetching: true});
       axios.get(this.uri.pokemon)
         .then(res => {
           this.setState({pokemon: res.data});
-        })
+          this.setState({isFetching: false});
+        }).catch(() => {
+          this.setState({isFetching: false});
+        });
     }
   }
 
   changePokemon (pokemon) {
     return (e) => {
+      this.setState({isFetching: true});
       this.setState({pokemon: null});
       axios.get(this.uri.pokemon)
         .then(res => {
           this.setState({pokemon: res.data});
-        })
+          this.setState({isFetching: false});
+        }).catch(() => {
+          this.setState({isFetching: false});
+        });
     }
   }
 
@@ -54,6 +63,7 @@ class App extends Component {
       pokemon={ this.state.pokemon }
       handleSearch={(e) => this.handleSearch(e)}
       changePokemon={(pokemon) => this.changePokemon(pokemon)}
+      isFetching={this.state.isFetching}
     />
   }
 }

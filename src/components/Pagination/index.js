@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 const Pagination = () => (
   <div className="row">
-    pagination
+    pagination <br/>
   </div>
 );
 
-// Pagination.propTypes = {
-//   handleSearch: PropTypes.func
-// };
+Pagination.propTypes = {
+
+};
 
 export default Pagination;
