@@ -57,12 +57,10 @@ class App extends Component {
 
   render() {
     return <AppContent
-      slogan={ this.state.slogan }
-      pokemons={ this.state.pokemons }
-      pokemon={ this.state.pokemon }
+      {...this.state}
+      isFetching={this.state.isFetching}
       handleSearch={(e) => this.handleSearch(e)}
       changePokemon={(pokemon) => this.changePokemon(pokemon)}
-      isFetching={this.state.isFetching}
     />
   }
 }
