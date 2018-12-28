@@ -59,7 +59,9 @@
   "scripts": {
     "start": "webpack-dashboard -- node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -71,9 +73,14 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@babel/plugin-transform-async-to-generator": "^7.2.0",
+    "@storybook/addon-actions": "^4.1.4",
+    "@storybook/addon-links": "^4.1.4",
+    "@storybook/react": "^4.1.4",
     "react-redux": "^5.1.0",
     "redux": "^4.0.1",
-    "webpack-dashboard": "^2.0.0"
+    "webpack-dashboard": "^2.0.0",
+    "@storybook/addons": "^4.1.4"
   },
   "standard": {
     "globals": [
