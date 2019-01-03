@@ -60,7 +60,7 @@
     "start": "webpack-dashboard -- node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -c storybook",
     "build-storybook": "build-storybook"
   },
   "eslintConfig": {
@@ -76,11 +76,11 @@
     "@babel/plugin-transform-async-to-generator": "^7.2.0",
     "@storybook/addon-actions": "^4.1.4",
     "@storybook/addon-links": "^4.1.4",
+    "@storybook/addons": "^4.1.4",
     "@storybook/react": "^4.1.4",
     "react-redux": "^5.1.0",
     "redux": "^4.0.1",
-    "webpack-dashboard": "^2.0.0",
-    "@storybook/addons": "^4.1.4"
+    "webpack-dashboard": "^2.0.0"
   },
   "standard": {
     "globals": [
