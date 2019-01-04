@@ -2,7 +2,7 @@ import React from 'react';
 
 const Pagination = () => (
   <div className="row">
-    pagination <br/>
+    1...456...10
   </div>
 );
 
