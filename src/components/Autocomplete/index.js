@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Button from '../Button';
 
 const Autocomplete = ({ handleSearch, isDisabled }) => (
   <div className="auto-complete">
@@ -9,6 +10,10 @@ const Autocomplete = ({ handleSearch, isDisabled }) => (
       onKeyUp={handleSearch}
       disabled={isDisabled}
     />
+
+    <Button kind="success" onClick={() => {}}>
+      Pesquisar
+    </Button>
   </div>
 );
 
