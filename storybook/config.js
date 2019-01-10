@@ -8,6 +8,7 @@ import '../src/components/Footer/style.scss'
 import '../src/components/Header/style.scss'
 import '../src/components/PokemonDetail/style.scss'
 import '../src/components/Pokemons/style.scss'
+import '../src/components/Button/button.scss'
 
 const req = require.context('../src/components', true, /.story.js$/);
 function loadStories() {
