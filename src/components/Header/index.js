@@ -8,7 +8,7 @@ const Header = ({slogan}) => (
       <li route="/">Home</li>
       <li route="/about">About</li>
       <li>
-        <a href="https://github.com/TL-Developer/PokeES6" target="_black">Github</a>
+        <a href="https://github.com/TL-Developer/reactmon" target="_black">Github</a>
       </li>
     </ul>
     <div className="app-title">

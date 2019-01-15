@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should Header to match snapshot 1`] = `
+<header
+  className="CcHeader"
+>
+  <ul
+    className="list"
+  >
+    <li
+      route="/"
+    >
+      Home
+    </li>
+    <li
+      route="/about"
+    >
+      About
+    </li>
+    <li>
+      <a
+        href="https://github.com/TL-Developer/reactmon"
+        target="_black"
+      >
+        Github
+      </a>
+    </li>
+  </ul>
+  <div
+    className="app-title"
+  >
+    <h3>
+      Slogan
+    </h3>
+  </div>
+</header>
+`;
