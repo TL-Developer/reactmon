@@ -1,13 +1,13 @@
 'use strict';
 
 import React from 'react';
-import * as Adapter from 'enzyme-adapter-react-15';
-import { shallow, configure } from 'enzyme';
+import Enzyme, { shallow } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
 import Button from './index';
 
-const noop = () => null;
+Enzyme.configure({ adapter: new Adapter() })
 
-configure({adapter: new Adapter()});
+const noop = () => null;
 
 it('Button with prop kind="success" should has class "success"', () => {
   const wrapper = shallow(
