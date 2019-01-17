@@ -15,3 +15,4 @@ export const store = createStore(
   )
 );
 
+console.log(store)

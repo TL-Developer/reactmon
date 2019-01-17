@@ -1,6 +1,6 @@
-import { FETCH_POKEMONS, NEW_POKEMON } from "./types";
+import { FETCH_POKEMONS } from "./types";
 
-export const fetchPokemons = () => async dispatch => {
+export const fetchPokemons = () => dispatch => {
   // fetch('https://pokeapi.co/api/v2/pokemon/?limit=21&offset=0')
   // 	.then((pokemons) => {
   // 		this.setState({pokemons: pokemons});
@@ -30,17 +30,5 @@ export const fetchPokemons = () => async dispatch => {
         'url': 'http://'
       }
     ]
-  });
-}
-
-export const changePokemon = (pokemon) => dispatch => {
-  debugger
-  dispatch({
-    type: NEW_POKEMON,
-    payload: {
-      'id': '1',
-      'name': 'pikachu',
-      'url': 'http://'
-    }
   });
 }
