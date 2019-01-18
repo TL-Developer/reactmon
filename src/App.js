@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import AppContent from './components/AppContent'
+import { connect } from 'react-redux'
 
 class App extends Component {
   constructor () {
@@ -18,10 +19,20 @@ class App extends Component {
     }
   }
 
+  componentWillReceiveProps(nextProps) {
+    debugger
+  }
+
+  componentDidMount() {
+
+  }
+
   componentWillMount () {
     axios.get(this.uri.pokemons)
       .then(res => {
-        this.setState({pokemons: res.data});
+        console.log(this.props)
+        this.props.dispatch({type: 'FETCH_POKEMONS', payload: res.data})
+        // this.setState({pokemons: res.data});
       })
   }
 
@@ -65,4 +76,8 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  state
+});
+
+export default connect(mapStateToProps)(App);
