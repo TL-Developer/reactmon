@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PokemonDetail = ({ title, pokemon }) => (
+const Pokemon = ({ title, pokemon }) => (
   <div>
     <div className="row"></div>
     { title } <br/>
@@ -9,18 +9,18 @@ const PokemonDetail = ({ title, pokemon }) => (
   </div>
 );
 
-PokemonDetail.defaultProps = {
+Pokemon.defaultProps = {
   title: '',
   pokemon: {}
 }
 
-PokemonDetail.propTypes = {
+Pokemon.propTypes = {
   title: PropTypes.string.isRequired,
   pokemon: PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired
   }),
 };
 
-export default PokemonDetail;
+export default Pokemon;
