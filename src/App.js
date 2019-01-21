@@ -21,6 +21,11 @@ class App extends Component {
 
   componentWillReceiveProps(nextProps) {
     debugger
+    const { pokemons } = nextProps.state;
+    this.setState(state => ({
+      ...state,
+      pokemons,
+    }));
   }
 
   componentDidMount() {
@@ -31,7 +36,8 @@ class App extends Component {
     axios.get(this.uri.pokemons)
       .then(res => {
         console.log(this.props)
-        this.props.dispatch({type: 'FETCH_POKEMONS', payload: res.data})
+        this.props.fetchPokemon(res.data);
+        // this.props.dispatch({type: 'FETCH_POKEMONS', payload: res.data})
         // this.setState({pokemons: res.data});
       })
   }
@@ -76,8 +82,12 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   state
 });
 
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = dispatch => ({
+  fetchPokemon: payload => dispatch({type: 'FETCH_POKEMONS', payload})
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

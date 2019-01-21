@@ -14,13 +14,9 @@ const initialState = [
 ]
 
 export default function (state = initialState, action) {
-  debugger
   switch (action.type) {
     case FETCH_POKEMONS:
-      return {
-        ...state,
-        pokemons: action.payload
-      }
+      return [...action.payload]
 
     default:
       return state;
