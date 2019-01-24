@@ -1,2 +1,2 @@
 export const FETCH_POKEMONS = 'FETCH_POKEMONS';
-export const NEW_POKEMON = 'NEW_POKEMON';
+export const CHANGE_POKEMON = 'CHANGE_POKEMON';

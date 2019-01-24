@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Header from '../Header/'
 import Pokemons from '../Pokemons/';
 import Footer from '../Footer/';
-import PokemonDetail from "../PokemonDetail/";
+import Pokemon from "../Pokemon/";
 import Autocomplete from "../Autocomplete/";
 import Pagination from "../Pagination/";
 
@@ -15,7 +15,7 @@ const AppComponent = ({slogan, pokemons, pokemon, handleSearch, changePokemon, i
     <div className="row">
       <div className="col-6">
         <h3>Lista de pokemons</h3>
-        { !!pokemons.length && <Pokemons pokemons={ pokemons } pokemon={ pokemon } changePokemon={ changePokemon } /> }
+        { !!pokemons.length && <Pokemons pokemons={ pokemons } changePokemon={ changePokemon } /> }
       </div>
 
       <div className="col-6">
@@ -26,7 +26,7 @@ const AppComponent = ({slogan, pokemons, pokemon, handleSearch, changePokemon, i
           />
         </div>
         {isFetching && <div>Carregando</div>}
-        { !!pokemon && <PokemonDetail title="Pokemon Details" pokemon={ pokemon } /> }
+        { !!pokemon && <Pokemon title="Pokemon Details" pokemon={ pokemon } /> }
       </div>
     </div>
 

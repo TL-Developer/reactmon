@@ -20,11 +20,10 @@ class App extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    debugger
-    const { pokemons } = nextProps.state;
-    this.setState(state => ({
-      ...state,
-      pokemons,
+    const { pokemons } = this.props.state;
+
+    this.setState((state) => ({
+      pokemons
     }));
   }
 
@@ -78,6 +77,7 @@ class App extends Component {
       isFetching={this.state.isFetching}
       handleSearch={(e) => this.handleSearch(e)}
       changePokemon={(pokemon) => this.changePokemon(pokemon)}
+      pokemon={this.props.state.pokemon}
     />
   }
 }
